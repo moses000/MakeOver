@@ -8,6 +8,7 @@
                 <p>Design by <a href="">Imoleayo</a></p>
             </div>
         </footer>
-        <script src="../js/main.js"></script>
+
+        <script src="client/js/main.js"></script>
     </body>
 </html>
