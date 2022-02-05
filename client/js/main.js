@@ -1,0 +1,1 @@
+alert("Hurray!!! Javascript has been configured.")
