@@ -3,6 +3,24 @@
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
+.glow {
+    border-radius: 100px;
+    animation: glow 1s infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 10px -10px white;
+    }
+    to {
+      box-shadow: 0 0 10px 10px #cc13ec;
+    }
+  }
+
+.navbar-custom {
+    background-color: #cc13ec;
+}
+  
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
