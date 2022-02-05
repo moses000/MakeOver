@@ -1,0 +1,1 @@
+<?php include 'client/pages/home.php'; ?>

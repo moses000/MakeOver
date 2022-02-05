@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     </head>
     <body>
         <header>
@@ -36,20 +37,14 @@
                 </div>
             </nav>
             </div>
-            <div class="bgHeader">
-                <div class="address">
-                    <h2>Address will be here</h2>
-                </div>
-                <div class="brand">
-                    <h1>glambydebbie</h1>
-                </div>
-                <div class="socialMedia">
-                    <i class="fa fa-instagram"></i>
-                    <i class="fa fa-whatsapp"></i>
-                    <i class="fa fa-facebook"></i>
-                </div>
-                <div class="product">
-                    <h1>Makeover</h1>
+            <div class="masthead">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                    <div class="col-12 text-center">
+                        <h1 class="fw-light">Vertically Centered Masthead Content</h1>
+                        <p class="lead">A great starter layout for a landing page</p>
+                    </div>
+                    </div>
                 </div>
             </div>
         </header>

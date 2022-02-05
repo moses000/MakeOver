@@ -1,113 +1,121 @@
 <?php include '../../server/controllers/header.php';?>
-            <div class="bgHeader">
-                <div class="address">
-                    <h2>Address will be here</h2>
-                </div>
-                <div class="brand">
-                    <h1>glambydebbie</h1>
-                </div>
-                <div class="socialMedia">
-                    <i class="fa fa-instagram"></i>
-                    <i class="fa fa-whatsapp"></i>
-                    <i class="fa fa-facebook"></i>
-                </div>
-                <div class="product">
-                    <h1>Makeover</h1>
-                </div>
-            </div>
-        </header>
         <section class="ourService">
-            <div class="service">
-                <div class="serviceHeader">
-                    <h2>Service header is here</h2>
+            <div class="row">
+                <div class="column">
+                    <div class="card">..</div>
                 </div>
-                <div class="serviceContent">
-                    <h2>Service description is here</h2>
+                <div class="column">
+                    <div class="card">..</div>
                 </div>
-            </div>
-            <div class="service">
-                <div class="serviceHeader">
-                    <h2>Service header is here</h2>
+                <div class="column">
+                    <div class="card">..</div>
                 </div>
-                <div class="serviceContent">
-                    <h2>Service description is here</h2>
-                </div>
-            </div>
-            <div class="service">
-                <div class="serviceHeader">
-                    <h2>Service header is here</h2>
-                </div>
-                <div class="serviceContent">
-                    <h2>Service description is here</h2>
+                <div class="column">
+                    <div class="card">..</div>
                 </div>
             </div>
         </section>
         <section class="marketing">
             <div class="award">
                 <div class="star">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
+                    <i class="fa fa-star checked"></i>
                 </div>
+                <hr />
                 <div class="awardContent">
                     <h2>Award content goes here</h2>
                 </div>
+                <hr />
                 <div class="awardEst">
                     <h2>Year of establishment goes here</h2>
                 </div>
             </div>
         </section>
         <section class="testimonial">
-            <div class="tetimonialBody">
-                <div class="testimonialWhole">
-                    <div class="testimonialImage">
-                        <img src="../img/" alt="Testimonial Image">
+            <div class="customer-feedback">
+                <div class="container text-center">
+                <div class="row">
+                    <div class="col-sm-offset-2 col-sm-8">
+                    <div>
+                        <h2 class="section-title">What Clients Say</h2>
                     </div>
-                    <div class="testimonialWord">
-                        <p>The speech of the testimonial will be here</p>
+                    </div><!-- /End col -->
+                </div><!-- /End row -->
+
+                <div class="row">
+                    <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+                    <div class="owl-carousel feedback-slider">
+
+                        <!-- slider item -->
+                        <div class="feedback-slider-item">
+                        <img src="//c2.staticflickr.com/8/7310/buddyicons/24846422@N06_r.jpg" class="center-block img-circle" alt="Customer Feedback">
+                        <h3 class="customer-name">Lisa Redfern</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a long established fact that a reader will be distracted by the readable its layout.</p>
+                        <span class="light-bg customer-rating" data-rating="5">
+                            5
+                            <i class="fa fa-star"></i>
+                        </span>
+                        </div>
+                        <!-- /slider item -->
+
+                        <!-- slider item -->
+                        <div class="feedback-slider-item">
+                        <img src="https://res.cloudinary.com/hnmqik4yn/image/upload/c_fill,fl_force_strip,h_128,q_100,w_128/v1493982718/ah57hnfnwxkmsciwivve.jpg" class="center-block img-circle" alt="Customer Feedback">
+                        <h3 class="customer-name">Cassi</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a long established fact that a reader will be distracted by the readable its layout.</p>
+                        <span class="light-bg customer-rating" data-rating="4">
+                            4
+                            <i class="fa fa-star"></i>
+                        </span>
+                        </div>
+                        <!-- /slider item -->
+
+                        <!-- slider item -->
+                        <div class="feedback-slider-item">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/451270/profile/profile-80.jpg" class="center-block img-circle" alt="Customer Feedback">
+                        <h3 class="customer-name">Md Nahidul</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a long established fact that a reader will be distracted by the readable its layout.</p>
+                        <span class="light-bg customer-rating" data-rating="5">
+                            5
+                            <i class="fa fa-star"></i>
+                        </span>
+                        </div>
+                        <!-- /slider item -->
+
+                    </div><!-- /End feedback-slider -->
+
+                    <!-- side thumbnail -->
+                    <div class="feedback-slider-thumb hidden-xs">
+                        <div class="thumb-prev">
+                        <span>
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/451270/profile/profile-80.jpg" alt="Customer Feedback">
+                        </span>
+                        <span class="light-bg customer-rating">
+                            5
+                            <i class="fa fa-star"></i>
+                        </span>
+                        </div>
+
+                        <div class="thumb-next">
+                        <span>
+                            <img src="https://res.cloudinary.com/hnmqik4yn/image/upload/c_fill,fl_force_strip,h_128,q_100,w_128/v1493982718/ah57hnfnwxkmsciwivve.jpg" alt="Customer Feedback">
+                        </span>
+                        <span class="light-bg customer-rating">
+                            4
+                            <i class="fa fa-star"></i>
+                        </span>
+                        </div>
                     </div>
-                    <div class="testimonialRating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </div>
-                </div>
-                <div class="testimonialWhole">
-                    <div class="testimonialImage">
-                        <img src="../img/" alt="Testimonial Image">
-                    </div>
-                    <div class="testimonialWord">
-                        <p>The speech of the testimonial will be here</p>
-                    </div>
-                    <div class="testimonialRating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </div>
-                </div>
-                <div class="testimonialWhole">
-                    <div class="testimonialImage">
-                        <img src="../img/" alt="Testimonial Image">
-                    </div>
-                    <div class="testimonialWord">
-                        <p>The speech of the testimonial will be here</p>
-                    </div>
-                    <div class="testimonialRating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                    </div>
-                </div>
-            </div>
-        </section>
+                    <!-- /side thumbnail -->
+
+                    </div><!-- /End col -->
+                </div><!-- /End row -->
+                </div><!-- /End container -->
+            </div><!-- /End customer-feedback -->
+            </section>
         <section>
             <div class="mapAddress">
                 Google Map address will be here 
