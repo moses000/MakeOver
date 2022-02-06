@@ -39,9 +39,10 @@
       </div>
       </header>
       <div class="container">
-  <h2>Bookings</h2>
+      <div class="table-responsive">
+      <h2>Bookings</h2>
   <p>You can filter the table</p>                                                                                      
-  <div class="table-responsive">
+
   <input class="form-control" id="myInput" type="text" placeholder="Search..">          
   <table class="table table-bordered table-striped">
     <thead>
@@ -60,11 +61,29 @@
 
 <?php include '../server/DB.php'; ?>
 <?php
-    $offset = 1; 
-    $sql = "SELECT * FROM booking WHERE id >= '$offset' ORDER BY id DESC LIMIT 10";
+  //define total number of results you want per page  
+  $results_per_page = 5;  
+  //find the total number of results stored in the database  
+  $sql_all = "SELECT * FROM booking";  
+  $result_all = $conn->query($sql_all);
+  $number_of_result = $result_all->num_rows;
+  //determine the total number of pages available  
+  $number_of_page = ceil ($number_of_result / $results_per_page);  
+   //determine which page number visitor is currently on 
+  if (!isset ($_GET['page']) ) {  
+      $page = 1;  
+  } else {  
+      $page = $_GET['page'];  
+  }
+  //determine the sql LIMIT starting number for the results on the displaying page  
+  $page_first_result = ($page-1) * $results_per_page; 
+  //retrieve the selected results from database 
+    $sql = "SELECT *FROM booking ORDER BY id LIMIT " . $page_first_result . ',' . $results_per_page;
+    //$sql = 'SELECT * FROM booking ORDER BY id DESC LIMIT.'$page_first_result.','.$results_per_page;
     $result = $conn->query($sql);
     
     if ($result->num_rows > 0) {
+      
       // output data of each row
       while($row = $result->fetch_assoc()) {
         
@@ -84,6 +103,17 @@
 <?php
         
       }
+      //display the link of the pages in URL  
+    for($page = 1; $page<= $number_of_page; $page++) {  
+?>
+      
+        <ul class="pagination">
+          <li><a href="index.php?page=<?php echo $page;?>"><?php echo $page;?></a></li>
+        </ul>
+    
+<?php
+      
+  }  
     } else {
       echo "0 results";
     }
@@ -93,6 +123,26 @@
 
 </tbody>
   </table>
+  <?php
+    if(isset($_GET['export']) && $_GET['export'] == current_page){
+      if($sql == true){
+        header("Content-Type:application/xls");
+        header("Content-Disposition:attachment, filename=download.xls");
+      }
+    }elseif(isset($_GET['export']) && $_GET['export'] == all_page){
+      if($sql_all == true){
+        header("Content-Type:application/xls");
+        header("Content-Disposition:attachment, filename=download.xls");
+      }
+    }
+  ?>
+    <form action="index.php?export=current_page" method="post" style="float: left;">
+        <input type="submit" name="export" value="Export Current page To Excel" class="btn-primary" style="border-radius:5px; padding:5px 15px; background:green;">
+     </form>
+     
+     <form action="index.php?export=all_page" method="post">
+        <input type="submit" name="export" value="Export All page To Excel" class="btn-primary" style="border-radius:5px; padding:5px 15px; background:green;">
+     </form>
   </div>
 </div>
 <script>
